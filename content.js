@@ -1,8 +1,7 @@
-const defaultBadWords = ["fuck", "shit", "bitch", "asshole", "dick", "piss", "slut", "whore", "nigga", "hell", "dickhead", "cunt", "bullshit"];
+const default_badwords = ["fuck", "shit", "bitch", "asshole", "dick", "piss", "slut", "whore", "nigga", "hell", "dickhead", "cunt", "bullshit"];
 
 function censorText(node, wordList) {
-    if (node.nodeType === 3) { // Text node
-        // Check if the node is inside an input, textarea, or other interactive element (dont ask i had problems)
+    if (node.nodeType === 3) {
         if (
             node.parentNode &&
             (node.parentNode.nodeName === "INPUT" ||
