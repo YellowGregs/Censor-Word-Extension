@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Censor Extension</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Word Censor</h1>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-button active" data-tab="settings">Settings</button>
+    <button class="tab-button" data-tab="word-management">Word Management</button>
+  </nav>
+
+  <main>
+    <!-- Settings Tab -->
+    <section id="settings" class="tab-content active">
+      <h2>Settings</h2>
+      <div class="theme-toggle">
+        <span>Light</span>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round"></span>
+        </label>
+        <span>Dark</span>
+      </div>
+
+      <div class="censor-toggle">
+        <label for="censor-enable">Enable Censorship</label>
+        <input type="checkbox" id="censor-enable">
+      </div>
+    </section>
+
+    <!-- Word Management Tab -->
+    <section id="word-management" class="tab-content">
+      <h2>Manage Words</h2>
+      <div class="input-container">
+        <input type="text" id="new-word" placeholder="Add a new word">
+        <button id="add-word">Add</button>
+      </div>
+      <ul id="word-list"></ul>
+      <button id="reset-words" class="reset-btn">Reset to Default</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Word Censor 2024</p>
+  </footer>
+
+  <script src="options.js"></script>
+</body>
+</html>
